@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+
+  margin: 5px;
+  padding: 0;
+}
+html,
+body {
+  overflow: auto;
+}
+body {
+  justify-items: center;
+  font-family: "Libre Baskerville", serif;
+  padding-top: 80px;
+  font-size: small;
+}
+#about,
+#skill,
+#project{
+  scroll-margin-top: 100px; /* Prevents navbar from hiding section content */
+  padding-top: 80px; /* Equal to navbar height */
+
+}
+
+/* Navbar */
+
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;  padding: 15px 20px;
+  height: 100vh;
+  width: 20%;
+  background: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.navbarLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbarlink {
+  text-decoration: none;
+  /* Removes underline */
+  color: white;
+  /* Change this to your preferred color */
+  font-weight: bold;
+  margin-left: 35px;
+  cursor: pointer;
+}
+
+.navbarlink:visited,
+.menubarlink:visited {
+  color: white;
+  /* Ensures color stays same after clicking */
+}
+
+.navbarlink:hover,
+.menubarlink:hover {
+  color: lightslategray;
+  text-decoration: none;
+  transition: 3ms;
+
+  /* Optional: Add a hover effect */
+}
+
+/*x in sidebar*/
+
+.toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.x {
+  text-align: right;
+  font-size: 20px;
+  position: relative;
+  left: 10px;
+
+  color: black;
+}
+
+.x:hover {
+  cursor: pointer;
+}
+
+.menubarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+/*Sidebar for Moblie Device*/
+
+.sidebar {
+  background-color: lightblue;
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  left: -60%;
+  margin: 0;
+  padding: 50px;
+  transition: 2s;
+}
+
+/*Head pic*/
+
+.ak {
+  border: 1px;
+  border-radius: 100%;
+}
+
+.image1 {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+/* From Uiverse.io by Botwe-Felix5820 */
+.Button {
+  height: 2.5em;
+  width: 11em;
+  border: none;
+  border-radius: 10em;
+  background: #016dd9;
+  font-size: 17px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+button:hover {
+  animation: shake3856 0.3s linear infinite both;
+}
+
+@keyframes shake3856 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+.name {
+  margin-top: 20px;
+}
+.name p {
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+/* About Section  background: linear-gradient(to right top ,yellow,red, blue, green);*/
+
+#about h1 {
+  font-size: 23px;
+  position: relative;
+  margin-top: -50px;
+}
+#about {
+
+
+  margin-top: 40px;
+  color: black;
+justify-content: center;
+  justify-items: center;
+  background: linear-gradient(to bottom right , rgb(235, 96, 4) ,white,green,pink );
+  height:60vh;
+  border: 5px double rgb(221, 157, 96);
+}
+
+.about {
+    width: 56%;
+
+  display: flex;
+ border: 2px solid lightsalmon;
+  margin: 10px 0px 5px;
+  align-items: center;
+
+  gap: 150px;
+}
+.aboutme ul li {
+  list-style: linear-gradient(to left bottom, red, rgb(0, 157, 219));
+}
+.about .am {
+  position: relative;
+  left: 60px;
+  top: -20px;
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: visible;
+}
+
+/*Skill Section*/
+#skill h1{
+  margin-top: -40px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.frontSkill,
+.backSkill {
+  margin-bottom: 30px;
+}
+
+.front,
+.back {
+  width: 40%;
+  height: auto;
+  margin-top: 30px;
+  list-style: none;
+  justify-content: space-evenly;
+  border: 4px solid lightblue;
+  border-radius: 20px;
+}
+
+.fr,
+.bk {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px 40px;
+  margin-left: 10px;
+}
+.fr1,
+.bk1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*Project conatiner */
+
+/*skill head*/
+#project h1{
+  margin-top: -50px;
+  text-align: center;
+}
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.project1 {
+  border: 3px solid lightslategray;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.head1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*commman click button style*/
+.click-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/*class="click-button1"*/
+.click-button1 {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid lightcoral;
+
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.click-button1:hover {
+  background-color: lightcoral;
+  transition: 2s;
+  transform: rotate3d(1, 1, 1, 360deg);
+  transition-timing-function: ease-in-out;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+/*footer section here*/
+footer {
+  margin-top: 100px;
+  background-color: #222;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  width: 99%;
+}
+
+.footer {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer1,
+.footer2 {
+  margin: 0;
+}
+
+.social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social ul li {
+  margin: 0;
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.social a:hover {
+  color: darkgray;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+@media (max-width: 450px) {
+  body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .navbarLinks {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .project1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .web-img img {
+    width: 90%;
+    height: auto;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .front,
+  .back {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .bk {
+    margin: 30px;
+    text-align: center;
+  }
+  @media (max-width: 450px) {
+    .footer {
+      flex-direction: column; /* Stack elements vertically */
+      flex-wrap: wrap; /* Stack elements vertically */
+      text-align: center;
+    }
+
+    .footer1,
+    .footer2 {
+      width: 100%; /* Full width for mobile */
+      margin-bottom: 8px;
+
+    }
+
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centers the social icons */
+    }
+
+    .social ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .social ul li {
+      margin: 3px 0;
+      text-align: center; /* Ensures text stays centered */
+    }
+
+    .social a {
+      display: inline-flex; /* Keeps icon and text in a line */
+      align-items: center;
+      gap: 8px; /* Space between icon and text */
+      text-align: center;
+    }
+  }
+}

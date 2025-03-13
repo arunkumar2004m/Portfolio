@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web app-capable" content="yes">
+    <title>Arunkumar M</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- FontAwesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="time">
+    <section class="nav">
+
+        <nav class="navbar">
+            <h2 class="welcome" onchange=" welcomeElement()"></h2>
+            <img src="image/ARUNKUMAR.jpg" width="150" height="150" class="ak" alt="Arunkumar M">
+            <div class="name">
+                <p> Hello I'm</p>
+                <h2 class="name">ARUNKUMAR &nbsp; M</h2>
+            </div>
+
+
+            <div class="navbarLinks">
+                <p class="navbarlink" onclick="about()">About</p>
+                <p class="navbarlink" onclick="skill()">Skills</p>
+                <p class="navbarlink" onclick="project()">Projects</p>
+                <p class="navbarlink" onclick="contact()">Contact</p>
+
+            </div>
+
+            <p class="toggle" onclick="showbar()">
+                <i class="fa-solid fa-bars"></i>
+            </p>
+        </nav>
+        <div class="sidebar">
+            <p class="x" onclick="closebar()">
+                <i class="fa-solid fa-xmark"></i>
+            </p>
+
+            <div class="menubar">
+                <div class="menubarLinks">
+                    <p class="menubarlink" onclick="about()">About</p>
+                    <p class="menubarlink" onclick="skill()">Skills</p>
+                    <p class="menubarlink" onclick="project()">Projects</p>
+                    <p class="menubarlink" onclick="contact()">Contact</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--About Section-->
+    <section id="about">
+
+        <h1>ABOUT</h1>
+
+        <div class="about">
+            <div class="am">
+                <img src="image/ARUNKUMAR.jpg" width="100" height="100" class="ak" alt="Arunkumar M">
+                <h4>ARUNKUMAR M</h4>
+               
+
+                    <div class="resume">
+                        <a href="assets/Resume/Arunkumar_M.pdf" download="">
+                            <button class="Button">Download Resume</button> </a>
+                    </div>
+
+               
+            </div>
+            <div class="aboutme">
+
+                <ul>
+
+
+                    <li>Hi, I'm Arunkumar M, a passionate Web Developer with a strong foundation in JavaScript,
+                        React.js,
+                        and
+                        front-end technologies. I enjoy creating dynamic, user-friendly web applications and
+                        continuously
+                        expanding
+                        my skills in full-stack development.</li>
+                    <li>
+                        I have a BSc in Computer Science and an Advanced Diploma in Java Programming, which have helped
+                        me
+                        build
+                        a
+                        solid understanding of web technologies. I've also completed projects like a weather web app ,
+                        Personal Portfolio Website and Love
+                        Calculator app with a JavaScript backend.
+                    </li>
+
+                    <li>
+                        Currently, I'm learning React.js in depth and working towards mastering the MERN stack. My goal
+                        is
+                        to
+                        develop high-quality, efficient, and scalable web applications while keeping up with the latest
+                        industry
+                        trends.
+
+                    </li>
+                    <li>
+                        Let's connect and build something amazing!
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Skill Section -->
+
+    <div id="skill">
+        <h1>SKILL'S</h1>
+
+        <div class="container">
+
+            <div class="front">
+                <div class="frontSkill">
+                    <h1>Front-end Skills</h1>
+                </div>
+                <div class="fr">
+                    <div class="fr1">
+                        <img src="image/icons8-html5-240.png" width="50" height="50" alt="HTML 5">
+
+                        <p>HTML 5</p>
+                    </div>
+                    <div class="fr1">
+                        <img src="image/CSS3.png" width="50" height="50" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                    <div class="fr1">
+                        <img src="image/JavaScript.png" width="50" height="50" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="backSkill">
+                    <h1>Back-end Skills</h1>
+                </div>
+
+                <div class="bk">
+                    <div class="bk1">
+                        <img src="image/Python.png" width="50" height="50" alt="Python">
+                        <p>Python</p>
+                    </div>
+                    <div class="bk1">
+                        <img src="image/Node.js.png" width="50" height="50" alt="Node.js">
+                        <p>Node.js</p>
+                    </div>
+                    <div class="bk1">
+                        <img src="image/MySql.png" width="50" height="50" alt="MySQL">
+                        <p>MySQL</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--Project Section-->
+
+    <div id="project">
+        <h1>PROJECT'S</h1>
+        <div class="project">
+
+            <div class="project1">
+                <div class="web-img">
+                    <img src="image/weather.jpg" width="auto" height="auto" alt="weather">
+                    <h2>Weather Web Forecasting</h2>
+                </div>
+                <div class="click-button">
+                    <p onclick="viewProject()" class="click-button1">View Project</p>
+                    <p onclick="viewProject()" class="click-button1">viewProject</p>
+                </div>
+
+            </div>
+            <div class="project1">
+                <div class="web-img">
+                    <img src="image/download (1).jpeg" width="auto" height="auto" alt="love-Calculator">
+                    <h2>Love Calculate Website</h2>
+                </div>
+                <div class="click-button">
+                    <p onclick="viewProject()" class="click-button1">View Project</p>
+                    <p onclick="viewProject()" class="click-button1">viewProject</p>
+                </div>
+            </div>
+            <div class="project1">
+                <div class="web-img">
+                    <img src="image/weather.jpg" width="auto" height="auto" alt="quiz">
+                    <h2>Quiz Website</h2>
+                </div>
+                <div class="click-button">
+                    <p onclick="viewProject()" class="click-button1">View Project</p>
+                    <p onclick="viewProject()" class="click-button1">viewProject</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section-->
+    <footer>
+        <div id="contact">
+            <h2>Contact</h2>
+            <div class="footer">
+                <div class="footer1">
+                    <div class="social">
+                        <ul>
+                            <li><a href="mailto:vishal2172004@gmail.com"><i class="fas fa-envelope"></i>
+                                    <span>E-Mail</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/arunkumar-m-7b1b3b1b3/"><i
+                                        class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer2">
+                    <h2>Location</h2>
+                    <p>Chennai, Tamil Nadu, India</p>
+                    <div class="copyright">
+                        <p>© 2025 Arunkumar M</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js" rel="script"></script>
+    <script src="assets/js/welcome.js" rel="script"></script>
+
+</body>
+
+</html>
