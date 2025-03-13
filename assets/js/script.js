@@ -1,13 +1,29 @@
 // JavaScript for Mobile Menu Toggle
 
-var side = document.querySelector(".sidebar");
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".toggle");
+    const sidebar = document.querySelector(".sidebar");
+    const closeButton = document.querySelector(".x");
+    const menuLinks = document.querySelectorAll(".menubarLinks a"); // Select all menu links
 
-function showbar() {
-    side.style.left = "0";
-}
-function closebar() {
-    side.style.left = "-60%";
-}
+    // Open sidebar when clicking the menu button
+    menuToggle.addEventListener("click", function () {
+      sidebar.style.left = "0"; // Open sidebar
+    });
+
+    // Close sidebar when clicking the 'X' button
+    closeButton.addEventListener("click", function () {
+      sidebar.style.left = "-60%"; // Close sidebar
+    });
+
+    // Close sidebar when clicking a menu item
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        sidebar.style.left = "-60%"; // Hide sidebar after clicking
+      });
+    });
+  });
+
 
 function about() {
     document.getElementById("about").scrollIntoView({ behavior: "smooth" });
@@ -28,17 +44,11 @@ function contact() {
 
 
 
-// JavaScript for Redirecting to Another Page
 
-document.addEventListener("DOMContentLoaded", function() {
-   
 
-    document.querySelectorAll(".click-button1").forEach(button => {
-        button.addEventListener("click", function() {
-            alert("Redirecting to Love Calculator in 3 seconds...");
-            setTimeout(function() {
-                window.location.href = "https://arunkumar2004m.github.io/Love-Calculator/";
-            }, 2000);
-       });
-    });
-});
+const project1 = (url) => window.open(url, "_blank"); // Opens URL in a new tab
+const project2 = (url) => (window.location.href = url); // Opens URL in a new tab
+const project3 = (url) => window.open(url, "_blank"); // Opens URL in a new tab
+
+
+

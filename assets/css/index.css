@@ -14,39 +14,45 @@ body {
   overflow: auto;
 }
 body {
-  justify-items: center;
   font-family: "Libre Baskerville", serif;
   padding-top: 80px;
   font-size: small;
 }
 #about,
 #skill,
-#project{
+#project,
+#contact {
   scroll-margin-top: 100px; /* Prevents navbar from hiding section content */
   padding-top: 80px; /* Equal to navbar height */
-
+  /* margin-top: -80px; /* Negative margin to compensate */
 }
 
 /* Navbar */
+.nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
 
+  width: 100vw;
+  background-color: black;
+  z-index: 1000; /* Ensures navbar stays above content */
+  padding: 15px 20px;
+}
 
 .navbar {
-  position: fixed;
-  left: 0;
-  top: 0;  padding: 15px 20px;
-  height: 100vh;
-  width: 20%;
-  background: #333;
-  color: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
+  padding: 10px;
+
+  color: white;
+  background-color: black;
+  justify-content: space-between;
 }
 
 .navbarLinks {
   display: flex;
-  flex-direction: column;
+  font-size: medium;
+  align-items: center;
 }
 
 .navbarlink {
@@ -60,16 +66,16 @@ body {
 }
 
 .navbarlink:visited,
-.menubarlink:visited {
+.menubarLinks:visited {
   color: white;
   /* Ensures color stays same after clicking */
 }
 
 .navbarlink:hover,
-.menubarlink:hover {
+.menubarlinks a:hover {
   color: lightslategray;
   text-decoration: none;
-  transition: 3ms;
+  transition: 0.3s;
 
   /* Optional: Add a hover effect */
 }
@@ -78,15 +84,18 @@ body {
 
 .toggle {
   display: none;
+  font-size: 23px;
+  position: relative;
+  left: 15px;
   cursor: pointer;
 }
 
 .x {
   text-align: right;
-  font-size: 20px;
+  font-size: 30px;
   position: relative;
-  left: 10px;
-
+  left: 20px;
+  top: 30px;
   color: black;
 }
 
@@ -102,11 +111,14 @@ body {
   font-size: 18px;
   margin-top: 40px;
 }
+.menubarLinks a:visited {
+  color: black;
+}
 
 /*Sidebar for Moblie Device*/
 
 .sidebar {
-  background-color: lightblue;
+  background-color: rgb(169, 215, 255);
   position: fixed;
   width: 60%;
   height: 100%;
@@ -114,9 +126,15 @@ body {
   left: -60%;
   margin: 0;
   padding: 50px;
-  transition: 2s;
+  transition: left 0.5s ease-in-out; /* Smooth transition */
 }
-
+.menubarLinks a {
+  text-decoration: none;
+  color: black;
+}
+.main {
+  margin-top: 80px;
+}
 /*Head pic*/
 
 .ak {
@@ -185,56 +203,95 @@ button:hover {
   margin-bottom: 0px;
   font-size: 16px;
 }
-/* About Section  background: linear-gradient(to right top ,yellow,red, blue, green);*/
-
-#about h1 {
-  font-size: 23px;
-  position: relative;
-  margin-top: -50px;
-}
-#about {
-
-
-  margin-top: 40px;
-  color: black;
-justify-content: center;
-  justify-items: center;
-  background: linear-gradient(to bottom right , rgb(235, 96, 4) ,white,green,pink );
-  height:60vh;
-  border: 5px double rgb(221, 157, 96);
-}
 
 .about {
-    width: 56%;
-
   display: flex;
- border: 2px solid lightsalmon;
-  margin: 10px 0px 5px;
   align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin-top: -50px;
+}
 
-  gap: 150px;
-}
-.aboutme ul li {
-  list-style: linear-gradient(to left bottom, red, rgb(0, 157, 219));
-}
-.about .am {
-  position: relative;
-  left: 60px;
-  top: -20px;
+.profile {
   text-align: center;
+}
 
-  white-space: nowrap;
-  overflow: visible;
+.profileimg {
+  border-radius: 100%;
+  box-shadow: 5px 5px 15px rgba(255, 0, 0, 0.3); /* Shadow effect */
+  border: 3px solid #a8a6a6;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* About Section  background: linear-gradient(to right top ,yellow,red, blue, green);*/
+#about {
+  margin-top: 20%;
+
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    to bottom right,
+    rgb(235, 96, 4),
+    white,
+    green,
+    pink
+  );
+  min-height: 60vh; /* Allows content to expand */
+  border: 5px double rgb(221, 157, 96);
+  padding: 20px;
+}
+/*
+ #about h1 {
+  font-size: 23px;
+  position: relative;
+  margin-top: 20px;
+ } */
+.ak {
+  border: 1px solid #222;
+}
+
+.about .am {
+  text-align: center;
+}
+
+.aboutme p {
+  padding: 0;
+  list-style: disc; /* Corrected from invalid 'linear-gradient' */
+  text-align: left;
+
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 /*Skill Section*/
-#skill h1{
-  margin-top: -40px;
+#skill h1 {
+  margin-top: -50px;
+}
+#skill {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  width: 100%;
+}
+.front {
   margin-top: 20px;
 }
 
@@ -245,35 +302,40 @@ justify-content: center;
 
 .front,
 .back {
-  width: 40%;
+  width: 35%; /* Keep the same width on larger screens */
   height: auto;
   margin-top: 30px;
   list-style: none;
   justify-content: space-evenly;
   border: 4px solid lightblue;
   border-radius: 20px;
+
+  min-width: 300px; /* Prevent shrinking too much on smaller screens */
 }
 
 .fr,
 .bk {
   display: flex;
   flex-wrap: wrap;
+
   justify-content: space-evenly;
-  padding: 20px 40px;
   margin-left: 10px;
 }
 .fr1,
 .bk1 {
   text-align: center;
-  margin-top: 10px;
+  margin: 30px;
 }
 
 /*Project conatiner */
 
 /*skill head*/
-#project h1{
+#project h1 {
   margin-top: -50px;
   text-align: center;
+}
+#project {
+  margin-top: 100px;
 }
 .project {
   display: flex;
@@ -302,22 +364,60 @@ justify-content: center;
 }
 
 /*class="click-button1"*/
-.click-button1 {
-  margin-top: 10px;
-  padding: 10px;
-  border: 2px solid lightcoral;
 
-  border-radius: 100px;
+/* From Uiverse.io by cssbuttons-io */
+
+.button1,
+.button2 {
+  --color: #560bad;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
   cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
 }
 
-.click-button1:hover {
-  background-color: lightcoral;
-  transition: 2s;
-  transform: rotate3d(1, 1, 1, 360deg);
-  transition-timing-function: ease-in-out;
+.button1::before,
+.button2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
 }
 
+.button1:hover,
+.button2:hover {
+  color: #fff;
+}
+
+.button1:hover::before,
+.button2:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+.button1:active::before,
+.button2:active::before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
 h1,
 h2,
 p {
@@ -332,18 +432,19 @@ footer {
   padding: 5px;
   text-align: center;
   width: 99%;
+
 }
 
 .footer {
   align-items: center;
   flex-wrap: wrap;
 }
+#contact {
+  padding: 0px 20px; /* Reduce padding for better fit */
+  text-align: center;
 
-.footer1,
-.footer2 {
-  margin: 0;
+  border-radius: 10px;
 }
-
 .social ul {
   display: flex;
   flex-wrap: wrap;
@@ -361,7 +462,7 @@ footer {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+
   font-size: 15px;
 }
 
@@ -375,11 +476,20 @@ footer {
   opacity: 0.7;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 750px) {
   body {
     margin: 0;
     padding: 0;
-    justify-content: center;
+  }
+  .nav {
+    width: 98%;
+  }
+  .navbar {
+    align-items: center;
+  }
+  .day {
+    position: relative;
+    right: 20px;
   }
 
   .navbarLinks {
@@ -389,7 +499,20 @@ footer {
   .toggle {
     display: block;
   }
+  .main {
+    margin-top: 150px;
+ margin-bottom: 50%;
+  }
+  #about {
+    width: 100vw;
+    margin-top: 250px;
+  }
+  .about {
+    display: flex;
 
+    flex-direction: row;
+    flex-wrap: wrap; /* Prevents layout breaking on small screens */
+  }
   .project1 {
     display: flex;
     flex-direction: column;
@@ -403,53 +526,126 @@ footer {
   .container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
   }
 
   .front,
   .back {
-    width: 90%;
-    margin-bottom: 20px;
+    background: white;
+    padding: 0px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
+
+  .fr,
   .bk {
-    margin: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+
+  .fr1,
+  .bk1 {
     text-align: center;
   }
-  @media (max-width: 450px) {
-    .footer {
-      flex-direction: column; /* Stack elements vertically */
-      flex-wrap: wrap; /* Stack elements vertically */
-      text-align: center;
-    }
 
-    .footer1,
-    .footer2 {
-      width: 100%; /* Full width for mobile */
-      margin-bottom: 8px;
+  .fr1 img,
+  .bk1 img {
+    width: 50px;
+    height: 50px;
+  }
+  .footer {
 
-    }
+    flex-direction: column; /* Stack elements vertically */
+    flex-wrap: wrap; /* Stack elements vertically */
+    text-align: center;
+  }
 
-    .social {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Centers the social icons */
-    }
+  .footer1,
+  .footer2 {
+    width: 100%; /* Full width for mobile */
+    margin-bottom: 8px;
+  }
 
-    .social ul {
-      padding: 0;
-      list-style: none;
-    }
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the social icons */
+  }
 
-    .social ul li {
-      margin: 3px 0;
-      text-align: center; /* Ensures text stays centered */
-    }
+  .social ul {
+    padding: 0;
+    list-style: none;
+  }
 
-    .social a {
-      display: inline-flex; /* Keeps icon and text in a line */
-      align-items: center;
-      gap: 8px; /* Space between icon and text */
-      text-align: center;
-    }
+  .social ul li {
+    margin: 3px 0;
+    text-align: center; /* Ensures text stays centered */
+  }
+
+  .social a {
+    display: inline-flex; /* Keeps icon and text in a line */
+    align-items: center;
+     /* Space between icon and text */
+    text-align: center;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100vw;
+    margin: auto;
+    justify-content: center;
+  }
+
+  /* Profile image styling */
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Default circular */
+    border: 3px solid #333;
+  }
+
+  html,
+  body {
+    overflow-x: hidden; /* Horizontal scroll remove */
+    max-width: 100%;
+  }
+  #about {
+    width: 99%;
+    padding: 10px;
+    margin-top: 120px;
+    min-height: fit-content;
+    border-width: 3px;
+    overflow-x: hidden; /* Extra scroll remove */
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    max-width: 100%;
+    margin: auto;
+    overflow-x: hidden;
+  }
+
+  .profileimg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 5px;
   }
 }
+
