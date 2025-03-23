@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web app-capable" content="yes">
     <title>Arunkumar M</title>
+    <link rel="icon" href="./image/ARUN(RADIUS).png">
     <link rel="stylesheet" href="assets/css/index.css">
     <!-- FontAwesome Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
@@ -20,7 +21,7 @@
         <nav class="navbar">
             <div class="day">
                 <h2 class="welcome" onchange=" welcomeElement()"></h2>
-                <h6>Welcometo to MY Personal Portfolio</h6>
+                <h5>Welcometo to MY Personal Portfolio</h5>
             </div>
 
 
@@ -69,18 +70,20 @@
 
     <!--About Section-->
     <section id="about">
-        <h1>ABOUT</h1>
-        <div class="about">
-            <div class="profile">
-                <img src="image/ARUNKUMAR.png" width="180" height="180" class="profileimg" alt="Arunkumar M">
-                <h4>ARUNKUMAR M</h4>
-                <h6>B.Sc. Computer Science</h6>
-            </div>
-            <div class="about-text">
-                <p>Hi, I'm <strong>Arunkumar M</strong>, a passionate Web Developer with a strong foundation in
-                    <strong>JavaScript, React.js,</strong> and front-end technologies. I enjoy creating dynamic,
-                    user-friendly web applications and continuously expanding my skills in full-stack development.
-                </p>
+        <div class="main1">
+            <h1>ABOUT</h1>
+            <div class="about">
+                <div class="profile">
+                    <img src="image/ARUNKUMAR.png" width="180" height="180" class="profileimg" alt="Arunkumar M">
+                    <h4>ARUNKUMAR M</h4>
+                    <h6>B.Sc. Computer Science</h6>
+                </div>
+                <div class="about-text">
+                    <p>Hi, I'm <strong>Arunkumar M</strong>, a passionate Web Developer with a strong foundation in
+                        <strong>JavaScript, React.js,</strong> and front-end technologies. I enjoy creating dynamic,
+                        user-friendly web applications and continuously expanding my skills in full-stack development.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -151,8 +154,9 @@
                     <h2>Weather Web Forecasting</h2>
                 </div>
                 <div class="click-button1">
-                    <p onclick="project1('https://arunkumar2004m.github.io/Weather-Web-Forecast-App/')" class="button1">View Project</p>
-                    <p onclick="detail1()" class="button2">Details</p>
+                    <p onclick="project1('https://arunkumar2004m.github.io/Weather-Web-Forecast-App/')" class="button1">
+                        View Project</p>
+                    <p onclick="(()=>window.location.href='assets/details/weather.html')()" class="button2">Details</p>
                 </div>
 
             </div>
@@ -164,17 +168,19 @@
                 <br>
                 <br>
                 <div class="click-button">
-                    <p onclick="project2('https://arunkumar2004m.github.io/Love-Calculator/')" class="button1">View Project</p>
-                    <p onclick="detail2()" class="button2">Details</p>
+                    <p onclick="project2('https://arunkumar2004m.github.io/Love-Calculator/')" class="button1">View
+                        Project</p>
+                    <p onclick="detail2('index.html')" class="button2">Details</p>
                 </div>
             </div>
             <div class="project1">
                 <div class="web-img">
-                    <img src="image/weather.jpg" width="auto" height="auto" alt="quiz">
-                    <h2>Quiz Website</h2>
+                    <img src="./assets/details/To-do-list.png" width="auto" height="auto" alt="quiz">
+                    <h2>To-Do-List</h2>
                 </div>
                 <div class="click-button">
-                    <p onclick="project3('https://arunkumar2004m.github.io/TO-DO-LIST/')" class="button1">View Project</p>
+                    <p onclick="project3('https://arunkumar2004m.github.io/TO-DO-LIST/')" class="button1">View Project
+                    </p>
                     <p onclick="detail3()" class="button2">Details</p>
                 </div>
             </div>
