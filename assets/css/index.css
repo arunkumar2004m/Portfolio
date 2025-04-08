@@ -371,7 +371,7 @@ button:hover {
 
 .button1,
 .button2 {
-  --color: #560bad;
+  --color: #3e0057;
   font-family: inherit;
   display: inline-block;
   width: 8em;
@@ -417,7 +417,7 @@ button:hover {
 
 .button1:active::before,
 .button2:active::before {
-  background: #3a0ca3;
+  background: #3c0064;
   transition: background 0s;
 }
 h1,
@@ -561,27 +561,36 @@ footer {
     flex-direction: column; /* Stack elements vertically */
     flex-wrap: wrap; /* Stack elements vertically */
     text-align: center;
+    align-items: center; /* Center items horizontally */
+  
   }
 
   .footer1,
   .footer2 {
-    width: 100%; /* Full width for mobile */
+    width: 80vw; /* Full width for mobile */
     margin-bottom: 8px;
+  }
+  .footer2{
+    margin-left: -12px;
   }
 
   .social {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the social icons */
+  
+    align-items: center; 
+    text-align: center;/* Centers the social icons */
   }
 
   .social ul {
     padding: 0;
     list-style: none;
+    margin-left: -30px;
   }
 
   .social ul li {
     margin: 3px 0;
+
     text-align: center; /* Ensures text stays centered */
   }
 
@@ -590,6 +599,7 @@ footer {
     align-items: center;
     /* Space between icon and text */
     text-align: center;
+    
   }
 
   .about {
