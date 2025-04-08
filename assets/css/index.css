@@ -559,7 +559,7 @@ footer {
   }
   .footer {
     flex-direction: column; /* Stack elements vertically */
-    flex-wrap: wrap; /* Stack elements vertically */
+    flex-wrap: nowrap; /* Stack elements vertically */
     text-align: center;
     align-items: center; /* Center items horizontally */
   
@@ -576,8 +576,7 @@ footer {
 
   .social {
     display: flex;
-    flex-direction: column;
-  
+    flex-direction: column; /* Stack elements vertically */
     align-items: center; 
     text-align: center;/* Centers the social icons */
   }
